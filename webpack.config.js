@@ -31,7 +31,8 @@ module.exports = {
     module: {
         rules: [
             {test: /\.xml$/i, loader: 'raw-loader'},
-            {test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/}
+            {test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/},
+            {test: /\.css$/i, use: ["style-loader", "css-loader"]}
         ],
     },
 
