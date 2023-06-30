@@ -1,4 +1,9 @@
 import rawXML from "./test.xml"
 
-console.log(rawXML);
+async function asyncCall(): Promise<string> {
+    return rawXML;
+}
 
+asyncCall().then(r => {
+    console.log("raw", r);
+});
