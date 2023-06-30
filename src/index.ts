@@ -1,9 +1,7 @@
-import rawXML from "./test.xml"
+import * as path from 'path';
 
-async function asyncCall(): Promise<string> {
-    return rawXML;
-}
+//Testing
+console.log(path);
 
-asyncCall().then(r => {
-    console.log("raw", r);
-});
+
+

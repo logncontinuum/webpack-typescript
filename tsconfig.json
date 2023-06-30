@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
+    "sourceMap": true,
+
     "module": "commonjs",
     "target": "es6",
-    "allowJs": true,
     "moduleResolution": "node",
-    "sourceMap": true,
-    "removeComments": true,
 
-    "noImplicitAny": false,
-    "noImplicitThis": false
+    "allowJs": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+
+    "removeComments": true,
+    "types": ["jest", "node"]
   }
 }
