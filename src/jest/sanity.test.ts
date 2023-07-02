@@ -29,7 +29,29 @@ describe("Webpack typescript sanity tests", () => {
 
     });
 
+    it("Testing class method overload and instanceOf", () => {
+        class Product{}
+
+        class A {
+            filter(name: string): Product[]
+            filter(name: string, price: number): Product[];
+            filter(name: string, price?: number): Product[] {
+                return [];
+            }
+        }
+
+        class B extends A {
+            filter(name: string): Product[] {
+                return [];
+            }
+        }
+
+        const b = new B();
+        expect(b instanceof A).toBe(true)
+    });
+
     it("Import path", () => {
         expect(path).not.toBe(undefined);
     });
+
 });
